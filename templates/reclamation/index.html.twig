@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+{% block title %}Reclamation index{% endblock %}
+
+
+{% block body %}
+    <h1><em><i>Reclamation index</i></em></h1>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Objet</th>
+                <th>Corps</th>
+                <th>semestre</th>
+                <th>matiere</th>
+                <th>DateCreation</th>
+                 {% if is_granted('ROLE_ADMIN') %}
+                 <th>PRENOM</th>
+                 <th>NOM</th>
+                 {% endif %}
+                <th>actions</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+        {% for reclamation in reclamations %}
+            <tr>
+                <td>{{ reclamation.id }}</td>
+                <td>{{ reclamation.objet }}</td>
+                <td>{{ reclamation.corps }}</td>
+                <td>{{ reclamation.semestre }}</td>
+                <td>{{ reclamation.matiere }}</td>
+                <td>{{ reclamation.DateCreation ? reclamation.DateCreation|date('Y-m-d H:i:s') : '' }}</td>
+                {% if is_granted('ROLE_ADMIN') %}
+                    <td>{{ reclamation.user.prenom}}</td>
+                    <td>{{ reclamation.user.nom}}</td>
+                {% endif %}
+                <td>
+                    <a href="{{ path('reclamation_show', {'id': reclamation.id}) }}">show</a>
+                    {%  if is_granted('ROLE_ETUDIANT')%}
+                      <div class="mb-3">
+                         <a href="{{ path('reclamation_edit', {'id': reclamation.id}) }}">edit</a>
+                      </div> 
+                    {% endif %}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {%  if is_granted('ROLE_ETUDIANT')%}
+         <div class="mb-3">
+            <a href="{{ path('reclamation_new') }}" <button type="button" class="btn btn-success"></button>Une nouvelle reclamation</a>
+        </div>
+     {% endif %}
+{% endblock %}

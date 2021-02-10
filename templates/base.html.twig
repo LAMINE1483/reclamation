@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel=stylesheet href="https://bootswatch.com/4/lumen/bootstrap.min.css">
+        <style>{% block style %}
+                body{
+   background-color:white;
+}
+#container{
+    width:400px;
+    margin:0 auto;
+    margin-top:10%;
+}
+/* Bordered form */
+form {
+    width:100%;
+    padding: 30px;
+    border: 36px solid #AFEEEE;
+    background:white;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+#container h1{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+input[type=submit] {
+    background-color: #53af57;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+input[type=submit]:hover {
+    background-color: white;
+    color: #53af57;
+    border: 1px solid #53af57;
+}
+.box {
+    border: 1px solid #c4c4c4;
+    padding: 30px 25px 10px 25px;
+    background: white;
+    margin: 30px auto;
+    width: 360px;
+  }
+  h1.box-logo a {
+    text-decoration:none;
+  }
+  h1.box-title {
+    color: #AEAEAE;
+    background: #f8f8f8;
+    font-weight: 300;
+    padding: 15px 25px;
+    line-height: 30px;
+    font-size: 25px;
+    text-align:center;
+    margin: -27px -26px 26px;
+  }
+  
+  .box-button {
+    border-radius: 5px;
+    background: #d2483c;
+    text-align: center;
+    cursor: pointer;
+    font-size: 19px;
+    width: 100%;
+    height: 51px;
+    padding: 0;
+    color: #fff;
+    border: 0;
+    outline:0;
+  }
+  .box-register
+  {
+    text-align:center;
+    margin-bottom:0px;
+  }
+  .box-register a
+  {
+    text-decoration:none;
+    font-size:12px;
+    color:#666;
+  }
+  .box-input {
+    font-size: 14px;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 25px;
+    padding-left:10px;
+    border-radius: 5px;
+    width: 347px;
+    height: 50px;
+  }
+  .box-input:focus {
+      outline: none;
+      border-color:#5c7186;
+  }
+  .sucess{
+    text-align: center;
+    color: white;
+  }
+  .sucess a {
+    text-decoration: none;
+    color: #58aef7;
+  }
+  p.errorMessage {
+      background-color: #e66262;
+      border: #AA4502 1px solid;
+      padding: 5px 10px;
+      color: #FFFFFF;
+      border-radius: 3px;
+  }
+  td{
+      background-color:#8FBC8F;
+  }
+  .footer-content{
+     color:black;
+  }
+  th{
+     background-color:yellow;
+  }
+input{
+  height: 100px;
+  width:145px;
+}
+button{
+  border: none;
+  margin: 20px;
+  padding: 24px;
+  width: 220px;
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
+background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+}
+
+.enregistrer{
+  border: none;
+  margin: 20px;
+  padding: 24px;
+  width: 275px;
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
+background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+}
+.deconnexion{
+  border: none;
+  margin: 20px;
+  padding: 24px;
+  width: 220px;
+  font-family: "montserrat",sans-serif;
+  text-transform: uppercase;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #fff;
+  background-size: 200%;
+  transition: 0.6s;
+background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+}
+.deconnexion:hover{
+  background-position: right;
+}
+
+.libelle{
+  width: 445px;
+  height: 100px;
+}
+legend{
+
+        font-size: 3em;
+        font-family: algerian,cambria,sans serif;
+        padding: 15px;
+        margin: 0 auto;
+        width: 50%;
+        background-image: linear-gradient(to left,#12CBC4,#0652DD,#12CBC4);
+        border-radius:5px;
+        text-align: center;
+        color:black;
+        text-transform: capitalize;
+      }
+  input[type=submit]
+     {
+        padding: 0px;
+        background-color: aqua;
+     }
+ form{
+       text-align: center;
+       border-radius: 4px;
+       color: grey;
+     }
+        {% endblock %}</style>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body >
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <img style=" **margin-top: -15px;**" alt="" src="img/logo.jpg" class="pull-left">
+            <a class="navbar-brand" href="/"><h4>Gestion des Reclamation</h4></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/login"><h4>Connexion</h4>
+                        <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/apropos"><h4>apropos</h4></a>
+                    </li>
+                   
+                </ul>
+               
+            </div>
+        </nav>
+        {% block div %}
+    
+            {% if app.user %}
+                <div class="mb-3">
+                  <h3><em> Vous etes connecté en tant que <b> {{ app.user.prenom }} {{ app.user.nom }}</b>, <a  href="{{ path('app_logout') }}" <button type="button" class="btn btn-warning"></button>Deconnexion</a>
+                </em>  </h3>
+                </div>
+            {% endif %}
+        {% endblock %}
+        <div class="container">
+           {% block body %}{% endblock %}
+        </div>
+        {% block javascripts %}
+            <script>
+              $(document).ready(function() {
+              $('#example').DataTable( {
+                  dom: 'Bfrtip',
+                  buttons: [
+                                'copy', 'csv', 'excel', 'pdf', 'print'
+                          ]
+                      } );
+                  } );
+            </script>
+            <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+            <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+            <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/dataTables.buttons.min.js"></script>
+            <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+            <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+            <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+            <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+            <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.6.5/js/buttons.html5.min.js"></script>
+
+            
+        {% endblock %}
+    </body>
+    <footer>
+         <div class="footer">
+			<div class="footer-inner">
+				<!-- #section:basics/footer -->
+				<div class="footer-content">
+					<span class="bigger-120"> <span class="blue bolder"></span>
+					<center>© Copyright 2021 Université de THIES,Departement informatique,Licence 2,Mouhamadou Lamine SANE</center>
+                </div>
+            </div>
+         </div>
+         <div class="container">
+           {% block footer %}{% endblock %}
+        </div>
+    </footer>
+    
+</html>
